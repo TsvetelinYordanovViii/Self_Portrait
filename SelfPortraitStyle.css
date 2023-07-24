@@ -244,19 +244,20 @@ body {
     align-items: center;
     background-color: rgb(85, 42, 11);
     width: 40rem;
-    height: 70rem;
-    margin-top: 112.5rem;
+    height: 90rem;
+    margin-top: 132.5rem;
     overflow: hidden;
 }
 
 .shirt {
     background-color: darkred;
-    height: 100%;
+    height: 90%;
     width: 30%;
+    margin-bottom: 25%;
 }
 
 .coatLines {
-    width: 22.5rem;
+    width: 22rem;
     height: 100%;
 }
 
@@ -267,7 +268,7 @@ body {
 }
 
 .coatNeckThings {
-    width: 26.5rem;
+    width: 26rem;
     height: 7.5rem;
     margin-top: 35rem;
     z-index: -1;
@@ -287,26 +288,42 @@ body {
     border-top-left-radius: 50%;
 }
 
+.bottomRim {
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    margin-top: 87.5rem;
+    background-color: antiquewhite;
+}
+
+.darkBackground {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.35);
+    height: 12.75%;
+    width: 30%;
+    margin-top: 82.5rem;
+}
+
 .fakeBadge {
     position: absolute;
     background-color: rgb(119, 72, 39);
     width: 8rem;
     height: 6rem;
     border-radius: 30% 100% 100% 30%;
-    margin-left: 1.8rem;
-    margin-top: 1.8rem;
+    margin-left: 2.7rem;
+    margin-top: 2.7rem;
 
-    transform: rotate(25deg);
+    transform: rotate(20deg);
 }
 
 .arms {
     width: 60rem;
-    margin-top: 122.5rem;
+    margin-top: 162.5rem;
 }
 
 .arm {
     width: 10rem;
-    height: 80rem;
+    height: 120rem;
 
     display: flex;
     justify-content: center;
@@ -317,7 +334,7 @@ body {
 .upperArm,
 .lowerArm {
     width: 100%;
-    height: 37.5%;
+    height: 45%;
     background-color: rgb(85, 42, 11);
     display: flex;
 }
@@ -331,11 +348,11 @@ body {
 }
 
 .right.upperArm {
-    border-top-right-radius: 50%;
+    border-top-right-radius: 60%;
 }
 
 .left.upperArm {
-    border-top-left-radius: 50%;
+    border-top-left-radius: 60%;
 }
 
 .sleeve {
@@ -348,6 +365,6 @@ body {
 
 .hand {
     width: 80%;
-    height: 25%;
+    height: 10%;
     background-color: bisque;
 }
