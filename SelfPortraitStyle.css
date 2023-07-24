@@ -1,10 +1,20 @@
 body {
+
+    background-color: darkslategrey;
+}
+
+.portrait {
+
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkslategrey;
-    margin: 0px;
-    padding: 0px;
+
+    width: 100%;
+    height: 100%;
+    z-index: -50;
+
+    transform: scale(100%, 100%);
 }
 
 .head {
@@ -104,8 +114,7 @@ body {
     justify-content: center;
     align-items: center;
 
-
-    animation: blink 0.5s linear 30s infinite;
+    animation: blink 15s linear 0s infinite;
 }
 
 .iris {
@@ -179,8 +188,21 @@ body {
 }
 
 .nose {
+    position: absolute;
     margin-top: 5rem;
     width: 4rem;
+}
+
+.noseButton {
+    position: absolute;
+
+    margin-left: 56rem;
+    margin-top: 20rem;
+    width: 6rem;
+    height: 6rem;
+    z-index: 15;
+    background-color: transparent;
+    border-style: none;
 }
 
 .noseSide,
@@ -191,6 +213,9 @@ body {
     height: 8rem;
     border-radius: 40%;
     border-color: rgb(214, 189, 158);
+
+    background-color: transparent;
+    enable-background: new;
 }
 
 
@@ -331,7 +356,7 @@ body {
 
 .arms {
     width: 60rem;
-    margin-top: 162.5rem;
+    margin-top: 142.5rem;
 }
 
 .arm {
@@ -347,7 +372,7 @@ body {
 .upperArm,
 .lowerArm {
     width: 100%;
-    height: 45%;
+    height: 50rem;
     background-color: rgb(85, 42, 11);
     display: flex;
 }
@@ -357,7 +382,10 @@ body {
 }
 
 .lowerArm {
-    align-items: flex-end;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    background-color: transparent;
 }
 
 .right.upperArm {
@@ -369,16 +397,20 @@ body {
 }
 
 .sleeve {
-    position: absolute;
-    margin-top: 2rem;
-    height: 5rem;
-    width: 10rem;
-    background-color: antiquewhite
+    width: 100%;
+    height: 60%;
+    background-color: rgb(85, 42, 11);
+}
+
+.sleeveEnd {
+    width: 100%;
+    height: 15%;
+    background-color: antiquewhite;
 }
 
 .hand {
-    width: 80%;
-    height: 10%;
+    width: 8rem;
+    height: 25%;
     background-color: bisque;
 }
 
@@ -389,11 +421,129 @@ body {
         height: 4rem;
     }
 
+
+    /* This gives a nice delay between blinks.*/
+    49% {
+        height: 4rem;
+    }
+
     50% {
         height: 0rem;
+    }
+
+    51% {
+        height: 4rem;
     }
 
     100% {
         height: 4rem;
     }
+}
+
+/* Slap */
+
+@keyframes moveUpperArm {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10rem) (45deg);
+        height: 25rem;
+    }
+
+    75% {
+        transform: translateY(-10rem) rotate(45deg);
+        height: 25rem;
+    }
+
+    100% {
+        transform: translateY(0rem) rotate(0deg);
+        height: 50rem;
+    }
+}
+
+@keyframes moveLowerArm {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    /*First set the translation then the rotation.*/
+    50% {
+        transform: translate(-15rem, -16.5rem) rotate(45deg);
+    }
+
+    75% {
+        transform: translate(-16rem, -17.5rem) rotate(405deg);
+    }
+
+    100% {
+        transform: translate(0rem, 0rem) rotate(360deg);
+    }
+}
+
+
+@keyframes lipMovement {
+    0% {
+        border-radius: 25% 0%;
+    }
+
+    50% {
+        border-radius: 0% 0%;
+    }
+
+    100% {
+        border-radius: 25% 0%;
+    }
+}
+
+@keyframes disaprovingLookIris {
+    0% {
+        margin-right: 2rem;
+    }
+
+    50% {
+        margin-right: 0rem;
+    }
+
+    100% {
+        margin-right: 2rem;
+    }
+}
+
+@keyframes disaprovingLookPupil {
+    0% {
+        margin-right: .5rem;
+    }
+
+    50% {
+        margin-right: 0rem;
+    }
+
+    100% {
+        margin-right: .5rem;
+    }
+}
+
+
+.left.upperArm.slap {
+    transform-origin: top right;
+    animation: moveUpperArm 2s;
+}
+
+.left.lowerArm.slap {
+    transform-origin: top right;
+    animation: moveLowerArm 2s;
+}
+
+.mouth.slap {
+    animation: lipMovement 4s;
+}
+
+.iris.slap {
+    animation: disaprovingLookIris 4s;
+}
+
+.pupil.slap {
+    animation: disaprovingLookPupil 4s;
 }

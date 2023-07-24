@@ -9,91 +9,102 @@
 </head>
 
 <body>
-    <div class="head">
-        <!--Based on what I learned, I add these group classes so that everything can be more easily moved and adjusted.-->
-        <div class="hair">
-            <div class="hairBack"></div>
-            <div class="left hairStroke"></div>
-            <div class="right hairStroke"></div>
-            <div class="extraHairRight"></div>
-            <div class="hairStrokeSmall"></div>
-        </div>
-        <div class="brows">
-            <div class="brow"></div>
-            <div class="connections">
-                <div class="left connection"></div>
-                <div class="right connection"></div>
+    <!--For some reason, the button doesn't work inside the portrait. That's why it is here.-->
+    <button class="noseButton"></button>
+    <!--The portrait class serves for easy resizing of the self portrait.-->
+    <div class="portrait">
+        <div class="head">
+            <!--Based on what I learned, I add these group classes so that everything can be more easily moved and adjusted.-->
+            <div class="hair">
+                <div class="hairBack"></div>
+                <div class="left hairStroke"></div>
+                <div class="right hairStroke"></div>
+                <div class="extraHairRight"></div>
+                <div class="hairStrokeSmall"></div>
             </div>
-            <div class="brow"></div>
-        </div>
-        <div class="eyes">
-            <!--The eye has an iris, the iris has a pupil. Makes centering and later offseting a bit easier.-->
-            <div class="eye">
-                <div class="iris">
-                    <div class="pupil"></div>
+            <div class="brows">
+                <div class="brow"></div>
+                <div class="connections">
+                    <div class="left connection"></div>
+                    <div class="right connection"></div>
+                </div>
+                <div class="brow"></div>
+            </div>
+            <div class="eyes">
+                <!--The eye has an iris, the iris has a pupil. Makes centering and later offseting a bit easier.-->
+                <div class="eye">
+                    <div class="iris">
+                        <div class="pupil"></div>
+                    </div>
+                </div>
+                <div class="eye">
+                    <div class="iris">
+                        <div class="pupil"></div>
+                    </div>
                 </div>
             </div>
-            <div class="eye">
-                <div class="iris">
-                    <div class="pupil"></div>
-                </div>
+            <div class="ears">
+                <div class="ear"></div>
+                <div class="ear"></div>
             </div>
-        </div>
-        <div class="ears">
-            <div class="ear"></div>
-            <div class="ear"></div>
-        </div>
-        <div class="nose">
-            <!--These classes allow for more realistic looking nose.-->
-            <div class="left noseSide"></div>
-            <div class="noseCenter"></div>
-            <div class="right noseSide"></div>
-        </div>
-        <!--The only way to get a rhombus shape is to put the actual moustache inside another box that gets squished.-->
-        <div class="moustache">
-            <div class="actualMoustache"></div>
-        </div>
 
-        <!--Nothing of note here other than it has a elements that are supposed to represent my coat.-->
-        <div class="mouth"></div>
-        <div class="neck"></div>
-        <div class="coatNeckThings">
-            <div class="left coatNeckThing"></div>
-            <div class="right coatNeckThing"></div>
-        </div>
-        <div class="body">
-            <!-- I tried to recreate a brown coat, I have. -->
-            <div class="coatLines">
-                <div class="coatLine"></div>
-                <div class="coatLine"></div>
+            <div class="nose">
+                <!--These classes allow for more realistic looking nose.-->
+                <div class="left noseSide"></div>
+                <div class="noseCenter"></div>
+                <div class="right noseSide"></div>
             </div>
-            <div class="shirt"></div>
-            <div class="bottomRim"></div>
-            <!-- The Dark Background box is used to darken areas that are meant to be under a shadow. -->
-            <div class="darkBackground"></div>
-        </div>
-        <div class="arms">
-            <!-- I split the arms into upper part, lower part and a hand for use in animations (If I get around to add them).-->
-            <div class="left arm">
-                <div class="left upperArm">
-                    <!-- A badge on either the left or right shoulder. -->
-                    <div class="fakeBadge"></div>
-                </div>
-                <div class="left lowerArm">
-                    <div class="sleeve"></div>
-                </div>
-                <!-- Decided against adding further detail to the hands as it would take too long.-->
-                <div class="hand"></div>
+            <!--The only way to get a rhombus shape is to put the actual moustache inside another box that gets squished.-->
+            <div class="moustache">
+                <div class="actualMoustache"></div>
             </div>
-            <div class="right arm">
-                <div class="right upperArm"></div>
-                <div class="right lowerArm">
-                    <div class="sleeve"></div>
+
+            <!--Nothing of note here other than it has a elements that are supposed to represent my coat.-->
+            <div class="mouth"></div>
+            <div class="neck"></div>
+            <div class="coatNeckThings">
+                <div class="left coatNeckThing"></div>
+                <div class="right coatNeckThing"></div>
+            </div>
+            <div class="body">
+                <!-- I tried to recreate a brown coat, I have. -->
+                <div class="coatLines">
+                    <div class="coatLine"></div>
+                    <div class="coatLine"></div>
                 </div>
-                <div class="hand"></div>
+                <div class="shirt"></div>
+                <div class="bottomRim"></div>
+                <!-- The Dark Background box is used to darken areas that are meant to be under a shadow. -->
+                <div class="darkBackground"></div>
+            </div>
+            <div class="arms">
+                <!-- I split the arms into upper part, lower part and a hand for use in animations (If I get around to add them).-->
+                <div class="left arm">
+                    <div class="left upperArm">
+                        <!-- A badge on either the left or right shoulder. -->
+                        <div class="fakeBadge"></div>
+                    </div>
+                    <div class="left lowerArm">
+                        <div class="sleeve"></div>
+                        <div class="sleeveEnd"></div>
+
+                        <!-- Decided against adding further detail to the hands as it would take too long.-->
+                        <div class="left hand"></div>
+                    </div>
+                </div>
+                <div class="right arm">
+                    <div class="right upperArm"></div>
+                    <div class="right lowerArm">
+                        <div class="sleeve"></div>
+                        <div class="sleeveEnd"></div>
+                        <div class="right hand"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="Animations.js"></script>
 </body>
 
 </html>
