@@ -19,6 +19,8 @@ body {
     align-items: center;
 }
 
+/*The settings for the hair*/
+
 .hair {
     width: 100%;
     height: 17.75rem;
@@ -44,6 +46,9 @@ body {
     border-radius: 100cm 100cm 50cm 50cm;
 }
 
+
+/*There are few strokes of hair that are infront of my face.*/
+
 .left.hairStroke {
     width: 16rem;
     height: 8rem;
@@ -67,6 +72,8 @@ body {
     margin-left: 19rem;
     transform: rotate(-60deg);
 }
+
+/*The pairing elements share the same flex settings for the most part.*/
 
 .eyes,
 .brows,
@@ -96,6 +103,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+
+    animation: blink 0.5s linear 30s infinite;
 }
 
 .iris {
@@ -203,7 +213,7 @@ body {
     margin-top: 16rem;
     width: 5rem;
     height: 5rem;
-
+    /* Here is where the moustache is squished.*/
     transform: scaleY(.30);
 }
 
@@ -214,11 +224,14 @@ body {
     border-top-style: solid;
     border-left-style: solid;
     border-radius: 20% 20% 100% 20%;
+
+    /* Border width is adjusted depending on the scale setting on .moustache.*/
     border-width: 6rem;
     border-color: rgb(46, 23, 7);
     transform: rotate(45deg);
 }
 
+/* I opted for a simple stroke for the mouth.*/
 .mouth {
     margin-top: 18.5rem;
     position: absolute;
@@ -367,4 +380,20 @@ body {
     width: 80%;
     height: 10%;
     background-color: bisque;
+}
+
+/*Animations*/
+
+@keyframes blink {
+    0% {
+        height: 4rem;
+    }
+
+    50% {
+        height: 0rem;
+    }
+
+    100% {
+        height: 4rem;
+    }
 }
