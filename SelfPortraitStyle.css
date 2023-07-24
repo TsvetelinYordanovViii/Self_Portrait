@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategrey;
+    margin: 0px;
+    padding: 0px;
+}
+
+.head {
+    margin-top: 30px;
+    position: relative;
+    width: 25rem;
+    height: 35rem;
+    background-color: antiquewhite;
+    border-radius: 100cm 100cm 75cm 75cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hair {
+    width: 27.5rem;
+    height: 17.75rem;
+    margin-bottom: 20rem;
+    border-radius: 100cm 100cm 50cm 50cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hairBack,
+.hairStrokeLeft,
+.hairStrokeRight,
+.extraHairRight {
+    position: absolute;
+    background-color: rgb(46, 23, 7);
+}
+
+.hairBack {
+    width: 27.5rem;
+    height: 17.75rem;
+    z-index: -1;
+    border-radius: 100cm 100cm 50cm 50cm;
+}
+
+.hairStrokeLeft {
+    width: 16rem;
+    height: 6rem;
+    margin-bottom: 5rem;
+    margin-right: 12.5rem;
+    transform: rotate(-45deg);
+    border-radius: 100%;
+}
+
+.hairStrokeRight {
+    width: 17.5rem;
+    height: 10rem;
+    margin-bottom: 3rem;
+    margin-left: 11rem;
+    transform: rotate(45deg);
+    border-radius: 100%;
+}
+
+.extraHairRight {
+    width: 6rem;
+    height: 8rem;
+    margin-bottom: -5.5rem;
+    margin-left: 19rem;
+
+    transform: rotate(-60deg);
+    border-radius: 100%;
+}
