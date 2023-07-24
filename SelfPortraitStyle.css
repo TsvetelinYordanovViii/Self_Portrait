@@ -20,7 +20,7 @@ body {
 }
 
 .hair {
-    width: 27.5rem;
+    width: 100%;
     height: 17.75rem;
     margin-bottom: 20rem;
     border-radius: 100cm 100cm 50cm 50cm;
@@ -70,4 +70,84 @@ body {
 
     transform: rotate(-60deg);
     border-radius: 100%;
+}
+
+.eyes,
+.brows,
+.connections {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18rem;
+}
+
+.eye {
+    background-color: white;
+    width: 6rem;
+    height: 4rem;
+    border-radius: 100%;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: rgb(129, 122, 113);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iris {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    background-color: gray;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pupil {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 100%;
+    background-color: black;
+    margin-right: .5rem;
+}
+
+.brows {
+    margin-bottom: 50px;
+}
+
+.brow,
+.connectionLeft,
+.connectionRight {
+    border-top-style: solid;
+    border-color: rgb(46, 23, 7);
+}
+
+.brow {
+    width: 6rem;
+    height: 3rem;
+    border-width: 0.75rem;
+    border-radius: 30%;
+}
+
+.connections {
+    margin-left: 4rem;
+    margin-top: 0.75rem;
+    width: 10rem;
+}
+
+.connectionLeft,
+.connectionRight {
+    width: 5rem;
+    height: 3rem;
+    border-width: 0.75rem;
+    border-radius: 10% 10%;
+    transform: rotate(10deg);
+}
+
+.connectionRight {
+    transform: rotate(-10deg);
 }
