@@ -685,3 +685,39 @@ body {
 .pupil.wave {
     animation: waveLookPupil 4s;
 }
+
+@media screen and (max-width: 1200px) {
+
+    .portrait,
+    .noseButton,
+    .rightArmButton {
+        transform: scale(70%, 70%);
+    }
+
+    .noseButton {
+        margin-top: 7rem;
+    }
+
+    .rightArmButton {
+        margin-top: 102.5rem;
+        margin-left: 35rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .portrait,
+    .noseButton,
+    .rightArmButton {
+        transform: scale(40%, 40%);
+    }
+
+    .noseButton {
+        margin-top: 4rem;
+    }
+
+    .rightArmButton {
+        margin-top: 57.5rem;
+        margin-left: 20rem;
+    }
+}
