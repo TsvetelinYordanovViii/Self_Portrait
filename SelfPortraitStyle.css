@@ -1,3 +1,4 @@
+/* Both the body and the portrait need to have their display set to flex, since both have something.*/
 body {
     position: relative;
     display: flex;
@@ -18,6 +19,30 @@ body {
     z-index: -50;
 
     transform: scale(100%, 100%);
+}
+
+/*The invisible buttons are here, because they serve a different function than be a part of the portrait.*/
+/*They allow some animations to be played when the viewer clicks certain locations.*/
+
+.rightArmButton {
+    position: absolute;
+    margin-top: 145rem;
+    margin-left: 50rem;
+    height: 100rem;
+    width: 10rem;
+    z-index: 15;
+    background-color: transparent;
+    border-style: none;
+}
+
+.noseButton {
+    position: absolute;
+    margin-top: 10rem;
+    width: 6rem;
+    height: 6rem;
+    z-index: 15;
+    background-color: transparent;
+    border-style: none;
 }
 
 .head {
@@ -43,6 +68,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/*Thought it will be better if I group those styles together.*/
 
 .hairBack,
 .hairStroke,
@@ -117,8 +144,12 @@ body {
     justify-content: center;
     align-items: center;
 
+    /*Blink every 15 seconds. The animation is setup to have some lengthy periods of nothing,
+    allowing for periodic blinking when setting a longer animation duration.*/
     animation: blink 15s linear 0s infinite;
 }
+
+/*Everyone says I have blue eyes, but they are gray.*/
 
 .iris {
     width: 3rem;
@@ -142,6 +173,8 @@ body {
 .brows {
     margin-bottom: 50px;
 }
+
+/*Not the most ideal brow setup, but it is close enough.*/
 
 .brow,
 .connection {
@@ -177,6 +210,8 @@ body {
     transform: rotate(-10deg);
 }
 
+/*Simple ears*/
+
 .ears {
     width: 27.5rem;
     z-index: -1;
@@ -190,20 +225,12 @@ body {
     background-color: rgb(214, 189, 158);
 }
 
+/*Those nose divs allow for a more realistic looking nose.*/
+
 .nose {
     position: absolute;
     margin-top: 5rem;
     width: 4rem;
-}
-
-.noseButton {
-    position: absolute;
-    margin-top: 10rem;
-    width: 6rem;
-    height: 6rem;
-    z-index: 15;
-    background-color: transparent;
-    border-style: none;
 }
 
 .noseSide,
@@ -213,10 +240,10 @@ body {
     width: 4rem;
     height: 8rem;
     border-radius: 40%;
+
     border-color: rgb(214, 189, 158);
 
     background-color: transparent;
-    enable-background: new;
 }
 
 
@@ -228,6 +255,7 @@ body {
     transform: rotate(30deg);
 }
 
+/*Only the center needs to have a background color so it can cover the other nose sides' borders*/
 .noseCenter {
     margin-top: 1rem;
     background-color: bisque;
@@ -295,6 +323,8 @@ body {
     margin-bottom: 25%;
 }
 
+/*These coat lines are the coat's internal side being visible outside.*/
+
 .coatLines {
     width: 22rem;
     height: 100%;
@@ -305,6 +335,8 @@ body {
     width: 5rem;
     background-color: antiquewhite;
 }
+
+/*Doesn't look good.*/
 
 .coatNeckThings {
     width: 26rem;
@@ -327,6 +359,8 @@ body {
     border-top-left-radius: 50%;
 }
 
+/*My coat actually doesn't have a bottom rim, but I added one anyway.*/
+
 .bottomRim {
     position: absolute;
     width: 100%;
@@ -334,6 +368,8 @@ body {
     margin-top: 87.5rem;
     background-color: antiquewhite;
 }
+
+/*Here's where the Dark Background box is used and positioned.*/
 
 .darkBackground {
     position: absolute;
@@ -370,16 +406,6 @@ body {
     flex-direction: column;
 }
 
-.rightArmButton {
-    position: absolute;
-    margin-top: 145rem;
-    margin-left: 50rem;
-    height: 100rem;
-    width: 10rem;
-    z-index: 15;
-    background-color: transparent;
-    border-style: none;
-}
 
 .upperArm,
 .lowerArm {
@@ -393,6 +419,7 @@ body {
     align-items: flex-start;
 }
 
+/* All visual details on the lower arm is moved to the sleeve, sleeve end and the hand.*/
 .lowerArm {
     align-items: center;
     justify-content: end;
@@ -420,6 +447,7 @@ body {
     background-color: antiquewhite;
 }
 
+/*A simple bisque box will represent a hand.*/
 .hand {
     width: 8rem;
     height: 25%;
@@ -433,12 +461,12 @@ body {
         height: 4rem;
     }
 
-
     /* This gives a nice delay between blinks.*/
     49% {
         height: 4rem;
     }
 
+    /* Blink.*/
     50% {
         height: 0rem;
     }
@@ -454,13 +482,14 @@ body {
 
 /* Slap */
 
+/* An attempt at recreating the motions for slapping a hand.*/
 @keyframes moveUpperArm {
     0% {
         transform: rotate(0deg);
     }
 
     50% {
-        transform: translateY(-10rem) (45deg);
+        transform: translateY(-10rem) rotate(45deg);
         height: 25rem;
     }
 
@@ -563,39 +592,15 @@ body {
 
 /* Wave */
 
-
-
-@keyframes blink {
-    0% {
-        height: 4rem;
-    }
-
-
-    /* This gives a nice delay between blinks.*/
-    49% {
-        height: 4rem;
-    }
-
-    50% {
-        height: 0rem;
-    }
-
-    51% {
-        height: 4rem;
-    }
-
-    100% {
-        height: 4rem;
-    }
-}
-
-/* Slap */
+/* An attempt at recreating the motions for waving at someone.*/
+/* It looks better than the slap.*/
 
 @keyframes waveUpperArm {
     0% {
         transform: rotate(0deg);
     }
 
+    /*Turn the upper arm slightly.*/
     50% {
         transform: (-15deg);
     }
@@ -614,7 +619,7 @@ body {
         transform: rotate(0deg);
     }
 
-    /*First set the translation then the rotation.*/
+    /*Waving motions*/
     50% {
         transform: translate(15rem, -3rem) rotate(-180deg);
     }
@@ -639,6 +644,8 @@ body {
         transform: translate(0rem, 0rem) rotate(0deg);
     }
 }
+
+/*Though those eye animations may be the same as the slap one, I think it is better to keep them here.*/
 
 @keyframes wavedLookIris {
     0% {
@@ -685,6 +692,10 @@ body {
 .pupil.wave {
     animation: waveLookPupil 4s;
 }
+
+/*Responsiveness*/
+/*Since I have the portrait box, I can resize the portrait with a single transform scale rule.*/
+/*Unfortunately I need to adjust the invisible buttons too because they are outside the portrait.*/
 
 @media screen and (max-width: 1200px) {
 
