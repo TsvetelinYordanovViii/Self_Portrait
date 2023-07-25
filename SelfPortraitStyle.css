@@ -370,6 +370,17 @@ body {
     flex-direction: column;
 }
 
+.rightArmButton {
+    position: absolute;
+    margin-top: 145rem;
+    margin-left: 50rem;
+    height: 100rem;
+    width: 10rem;
+    z-index: 15;
+    background-color: transparent;
+    border-style: none;
+}
+
 .upperArm,
 .lowerArm {
     width: 100%;
@@ -547,4 +558,130 @@ body {
 
 .pupil.slap {
     animation: disaprovingLookPupil 4s;
+}
+
+
+/* Wave */
+
+
+
+@keyframes blink {
+    0% {
+        height: 4rem;
+    }
+
+
+    /* This gives a nice delay between blinks.*/
+    49% {
+        height: 4rem;
+    }
+
+    50% {
+        height: 0rem;
+    }
+
+    51% {
+        height: 4rem;
+    }
+
+    100% {
+        height: 4rem;
+    }
+}
+
+/* Slap */
+
+@keyframes waveUpperArm {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: (-15deg);
+    }
+
+    75% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes waveLowerArm {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    /*First set the translation then the rotation.*/
+    50% {
+        transform: translate(15rem, -3rem) rotate(-180deg);
+    }
+
+    50% {
+        transform: translate(15rem, -3rem) rotate(-150deg);
+    }
+
+    60% {
+        transform: translate(15rem, -3rem) rotate(-130deg);
+    }
+
+    65% {
+        transform: translate(15rem, -3rem) rotate(-150deg);
+    }
+
+    75% {
+        transform: translate(15rem, -3rem) rotate(-130deg);
+    }
+
+    100% {
+        transform: translate(0rem, 0rem) rotate(0deg);
+    }
+}
+
+@keyframes wavedLookIris {
+    0% {
+        margin-right: 2rem;
+    }
+
+    50% {
+        margin-right: 0rem;
+    }
+
+    100% {
+        margin-right: 2rem;
+    }
+}
+
+@keyframes waveLookPupil {
+    0% {
+        margin-right: .5rem;
+    }
+
+    50% {
+        margin-right: 0rem;
+    }
+
+    100% {
+        margin-right: .5rem;
+    }
+}
+
+.right.upperArm.wave {
+    transform-origin: top left;
+    animation: waveUpperArm 2s;
+}
+
+.right.lowerArm.wave {
+    transform-origin: top left;
+    animation: waveLowerArm 2s;
+}
+
+.iris.wave {
+    animation: wavedLookIris 4s;
+}
+
+.pupil.wave {
+    animation: waveLookPupil 4s;
 }
