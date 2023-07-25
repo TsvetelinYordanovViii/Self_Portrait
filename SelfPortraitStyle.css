@@ -45,6 +45,8 @@ body {
     border-style: none;
 }
 
+/*Portrait stylization.*/
+
 .head {
     margin-top: 30px;
     position: relative;
@@ -87,7 +89,7 @@ body {
 }
 
 
-/*There are few strokes of hair that are infront of my face.*/
+/*There are few strokes of hair that are infront of my face with variable rotation and size.*/
 
 .left.hairStroke {
     width: 16rem;
@@ -113,7 +115,7 @@ body {
     transform: rotate(-60deg);
 }
 
-/*The pairing elements share the same flex settings for the most part.*/
+/*The pairing elements share the same flex settings for the most part. More often than not the width is either too much or too little.*/
 
 .eyes,
 .brows,
@@ -411,20 +413,13 @@ body {
 .lowerArm {
     width: 100%;
     height: 50rem;
-    background-color: rgb(85, 42, 11);
     display: flex;
 }
 
+/* The upper arm doesn't have any detail. Therefore it gets to be colored and shaped.*/
 .upperArm {
+    background-color: rgb(85, 42, 11);
     align-items: flex-start;
-}
-
-/* All visual details on the lower arm is moved to the sleeve, sleeve end and the hand.*/
-.lowerArm {
-    align-items: center;
-    justify-content: end;
-    flex-direction: column;
-    background-color: transparent;
 }
 
 .right.upperArm {
@@ -433,6 +428,13 @@ body {
 
 .left.upperArm {
     border-top-left-radius: 60%;
+}
+
+/* All visual details on the lower arm is moved to the sleeve, sleeve end and the hand.*/
+.lowerArm {
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
 }
 
 .sleeve {
