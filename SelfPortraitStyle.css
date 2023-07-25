@@ -1,5 +1,8 @@
 body {
-
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: darkslategrey;
 }
 
@@ -195,9 +198,7 @@ body {
 
 .noseButton {
     position: absolute;
-
-    margin-left: 56rem;
-    margin-top: 20rem;
+    margin-top: 10rem;
     width: 6rem;
     height: 6rem;
     z-index: 15;
